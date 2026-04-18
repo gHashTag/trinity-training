@@ -1,0 +1,19 @@
+# HSLM Training
+data/
+*.ckpt
+*.log
+wandb/
+*.db
+
+# Zig
+zig-cache/
+zig-out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
