@@ -1,1 +1,17 @@
-{.name: "trinity-training", version: "0.1.0", dependencies: {zig_golden_float: {url: "https://github.com/gHashTag/zig-golden-float/archive/main.tar.gz"}}}
+.{
+    .name = .trinity_training,
+    .version = "0.1.0",
+    .dependencies = .{
+        .zig_golden_float = .{
+            .url = "https://github.com/gHashTag/zig-golden-float/archive/refs/heads/main.tar.gz",
+            .hash = "golden_float-0.2.0-h7LKhdEXCgA666AjkuikpycwldAc3ftwT5F-pn3NtfLn",
+        },
+    },
+    .paths = .{
+        "src",
+        "build.zig",
+        "build.zig.zon",
+        "README.md",
+    },
+    .fingerprint = 0x732f7b8aecbec733,
+}

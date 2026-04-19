@@ -4,6 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
+    // Build modules
     const railway_api = b.createModule(.{
         .root_source_file = b.path("src/tri/railway_api.zig"),
         .target = target,
