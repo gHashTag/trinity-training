@@ -17,3 +17,16 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Binaries
+*.o
+hslm-cli
+hslm-tjepa-trainer
+hslm-train
+golden_chain
+tri_gen
+train-types
+simple
+
+# Build artifacts
+zig-pkg/
