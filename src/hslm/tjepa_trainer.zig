@@ -361,3 +361,9 @@ test "tjepa metrics record" {
     const avg = metrics.avgLoss();
     try std.testing.expectApproxEqAbs(@as(f32, 1.35), avg, 1e-5);
 }
+
+// Entry point for hslm-tjepa-trainer
+pub fn main() !u8 {
+    std.debug.print("T-JEPA Trainer - Not yet implemented\n", .{});
+    return 0;
+}

@@ -27,7 +27,7 @@ const MATMUL_ITERS = 100_000;
 // MAIN
 // ═══════════════════════════════════════════════════════════════════════════════
 
-pub fn main() !void {
+pub fn main() !u8 {
     const stdout = std.fs.File.stdout().deprecatedWriter();
     const allocator = std.heap.page_allocator;
 
