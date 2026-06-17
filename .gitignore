@@ -30,3 +30,6 @@ simple
 
 # Build artifacts
 zig-pkg/
+
+.env*
+!.env.example

@@ -3,7 +3,10 @@
 // ~1.24M ternary parameters, ~248KB
 
 const std = @import("std");
-const constants = @import("constants.zig");
+
+// Import zig-golden-float for sacred constants and numeric formats
+const golden_float = @import("../../zig-golden-float/src/formats/golden_float16.zig");
+const f16_utils = @import("../../zig-golden-float/src/formats/f16_utils.zig");
 const tokenizer_mod = @import("tokenizer.zig");
 const embedding_mod = @import("embedding.zig");
 const trinity_block = @import("trinity_block.zig");

@@ -44,15 +44,29 @@ src/
 data/               (208MB)
 ```
 
-## 🌌 Ecosystem
+## 🌌 Trinity Ecosystem
 
-Core dep: [zig-golden-float](https://github.com/gHashTag/zig-golden-float).
+> Golden Ratio mathematics meets computational physics and AI.
 
-Cloud platforms:
+| Repository | Purpose | Status |
+|---|---|---|
+| [trinity](https://github.com/gHashTag/trinity) | 🎯 Orchestrator, agents, API, MCP server | ✅ Main |
+| [zig-golden-float](https://github.com/gHashTag/zig-golden-float) | 🔢 Numeric core: GF16, TF3, VSA, JIT | [![CI](https://img.shields.io/github/actions/workflow/status/gHashTag/zig-golden-float/ci.yml?branch=main)](https://github.com/gHashTag/zig-golden-float/actions) |
+| [trinity-training](https://github.com/gHashTag/trinity-training) | 🧠 ML: HSLM, benchmarks, datasets | ✅ Here |
+| [t27](https://github.com/gHashTag/t27) | 📜 Ternary SSOT + Rust bootstrap | 📜 Language |
+| [vibee-lang](https://github.com/gHashTag/vibee-lang) | 🎵 VIBEE language spec (.tri/.vibee) | 📜 Language |
+| [zig-hdc](https://github.com/gHashTag/zig-hdc) | 🧩 Hyperdimensional: VSA, HRR | ✅ |
+| [zig-sacred-geometry](https://github.com/gHashTag/zig-sacred-geometry) | 📐 Sacred φ-geometry, Beal | ✅ |
+| [zig-physics](https://github.com/gHashTag/zig-physics) | ⚛️ Quantum: QCD, gravity, dark matter | ✅ |
+| [zig-knowledge-graph](https://github.com/gHashTag/zig-knowledge-graph) | 🕸️ KG server + CLI | ✅ |
+| [zig-agents](https://github.com/gHashTag/zig-agents) | 🤖 Agents: MCP, autonomous | ✅ |
+| [zig-crypto-mining](https://github.com/gHashTag/zig-crypto-mining) | 💰 BTC mining + DePIN | ✅ |
+| [trinity-fpga](https://github.com/gHashTag/trinity-fpga) | 🔌 FPGA: Verilog synthesis | 🔄 WIP |
+
+**Cloud Platforms:**
 - Railway — multi-account farm for distributed training
 - Fly.io — multi-region swarm deployment
 
 ## 📜 License
 
 MIT © gHashTag
-```
