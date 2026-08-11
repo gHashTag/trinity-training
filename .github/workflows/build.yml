@@ -1,0 +1,28 @@
+# The one workflow this repository had was queen-deploy.yml, which never runs
+# `zig build`. The manifest pinned golden_float-0.2.0 while upstream had moved
+# to 2.1.0, so a fetch failed with a hash mismatch before any compilation
+# started — and there was no `test` step at all: `zig build test` answered
+# "error: no step named 'test'" while 672 test blocks sat in the tree.
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mlugg/setup-zig@v1
+        with:
+          version: 0.15.2
+
+      - name: zig build
+        run: zig build
+
+      - name: zig build test
+        run: zig build test --summary all
