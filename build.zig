@@ -49,4 +49,20 @@ pub fn build(b: *std.Build) void {
     const train_step = b.step("train", "Build HSLM CLI");
     train_step.dependOn(&hslm_exe.step);
     b.default_step = train_step;
+
+    // There was no test step at all. `zig build test` answered
+    // "error: no step named 'test'", while 672 `test` blocks sat in the tree
+    // across 104 files. Nothing could run them, so nothing ever had.
+    const test_step = b.step("test", "Run tests");
+    const test_roots = [_]struct { name: []const u8, mod: *std.Build.Module }{
+        .{ .name = "hslm", .mod = hslm },
+        .{ .name = "railway_farm", .mod = railway_farm },
+        .{ .name = "cloud_train", .mod = cloud_train },
+        .{ .name = "railway_api", .mod = railway_api },
+        .{ .name = "railway_circuit", .mod = railway_circuit },
+    };
+    for (test_roots) |r| {
+        const t = b.addTest(.{ .name = r.name, .root_module = r.mod });
+        test_step.dependOn(&b.addRunArtifact(t).step);
+    }
 }
