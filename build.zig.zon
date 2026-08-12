@@ -2,9 +2,17 @@
     .name = .trinity_training,
     .version = "0.1.0",
     .dependencies = .{
+        // Pinned to a commit, not to refs/heads/main.
+        //
+        // A .url pointing at main's tarball plus a content .hash is
+        // self-invalidating: every merge upstream changes the tarball, so the
+        // hash stops matching and every downstream manifest breaks at fetch,
+        // before a single file is compiled. That is how this pin came to be
+        // three versions stale — it broke the moment upstream moved, and
+        // nothing downstream could build to notice.
         .golden_float = .{
-            .url = "https://github.com/gHashTag/zig-golden-float/archive/refs/heads/main.tar.gz",
-            .hash = "golden_float-2.1.0-h7LKhS0ICwBV7_RGpLbK30-1dFMQ1SUmMq1c34c4O0yj",
+            .url = "https://github.com/gHashTag/zig-golden-float/archive/e7ce32885de2a8c50b7b6a3030d0592202145dd1.tar.gz",
+            .hash = "golden_float-2.1.0-h7LKhUUNCwAtKVHQ56wjridCZVwXY7_oxT2hXD9xCDdF",
         },
     },
     .paths = .{

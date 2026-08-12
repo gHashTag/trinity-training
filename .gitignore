@@ -33,3 +33,9 @@ zig-pkg/
 
 .env*
 !.env.example
+
+# Zig renamed the build cache to .zig-cache (leading dot) in 0.12.
+# This file still said zig-cache/, so the pattern never matched and 56 cache
+# files were committed. It went unnoticed because no workflow here had ever
+# run a build.
+.zig-cache/
